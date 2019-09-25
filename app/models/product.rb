@@ -12,8 +12,15 @@
 
 class Product < ApplicationRecord
   mount_uploader :image, ImageUploader
+  
+  has_many :basket_products, dependent: :destroy
+  has_many :purchase_record_products, dependent: :destroy
+  
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
+  
   include Hashid::Rails
+  
+  belongs_to :admin
 end
