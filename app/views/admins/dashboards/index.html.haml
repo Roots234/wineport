@@ -1,2 +1,11 @@
-%h1
-  Dashboard
+.container
+  %h2.center
+    Admin Dashboard
+  .collection
+    %ul
+      %li.collection-item.admin__collection-item
+        %span
+          今までの売上
+          %span.admin__sales.ml-10
+            <!--ログイン中のadminの総売り上げ -->
+            #{@total} 円

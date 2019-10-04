@@ -9,7 +9,6 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -38,6 +37,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'hashid-rails', '~> 1.0'
+gem "ransack"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -49,6 +49,10 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'faker'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'sqlite3'
+  
 end
 
 group :development do
@@ -61,6 +65,10 @@ group :development do
   gem 'letter_opener'
   gem 'letter_opener_web', '~> 1.0'
   gem 'annotate'
+end
+
+group :production do
+  gem 'pg', '0.20.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

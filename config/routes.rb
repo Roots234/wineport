@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   resource :basket, only: %i(show)
   resource :charge, only: %i(create)
+  resource :sales_record, only: %i(show)
+  
   
   
   resources :products, only: %i(show) do
@@ -18,7 +20,8 @@ Rails.application.routes.draw do
   
   namespace :admins do
     root to: "dashboards#index"
-    resources :products, only: %i(new create)
+    resources :products, only: %i(new create edit update destroy)
+    resource :sales_record, only: %(show)
   end
   
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?

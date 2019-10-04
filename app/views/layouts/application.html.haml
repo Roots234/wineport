@@ -7,17 +7,36 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
+    -if flash[:notice]
+      %p.notice= notice
+    -if flash[:alert]
+      %p.alert= alert
     %nav
-      .nav-wrapper
-        %ul#nav-mobile.right.hide-on-med-and-down
+      .nav-wrapper.pt-3.pb-1.align-middle.pr-2.d-flex.justify-content-between
+        = link_to image_tag("/uploads/Wineport.jpg"), root_path, class: "pl-3"
+        %ul#nav-mobile.right.hide-on-med-and-down.text-right.list-unstyled.list-inline
           - if current_user.present?
-            %li
-              = link_to 'ログアウト', destroy_user_session_path, method: :delete
-          - elsif current_admin.present?
-            %li
-              = link_to 'ログアウト（アドミン）', destroy_admin_session_path, method: :delete
-
-          
+            %li.list-inline-item
+              = link_to '商品一覧', root_path, class: 'btn btn-primary'
+            %li.list-inline-item
+              = link_to '買い物かご', basket_path, class: 'btn btn-primary'
+            %li.list-inline-item
+              = link_to '購入履歴', sales_record_path, class: 'btn btn-primary'
+            %li.list-inline-item
+              = link_to 'ログアウト', destroy_user_session_path, class: 'btn btn-warning', method: :delete
+          - else 
+            %li.list-inline-item
+              = link_to '商品一覧', root_path, class: 'btn btn-primary'
+            %li.list-inline-item
+              = link_to 'ログイン', new_user_session_path, class: 'btn btn-warning'
+          - if current_admin.present?
+            %li.list-inline-item
+              = link_to '出品管理（アドミン）', new_admins_product_path, class: 'btn btn-danger', method: :get
+            %li.list-inline-item
+              = link_to '購入履歴（アドミン）', admins_sales_record_path, class: 'btn btn-danger', method: :get
+            %li.list-inline-item
+              = link_to 'ログアウト（アドミン）', destroy_admin_session_path, class: 'btn btn-danger', method: :delete
+          - else
+            %li.list-inline-item
+              = link_to '出品者ログイン（アドミン）', new_admin_session_path, class: 'btn btn-danger'
     = yield

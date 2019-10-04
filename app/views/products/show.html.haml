@@ -1,17 +1,25 @@
-- if @product.image.url.present?
-  = image_tag @product.image.url
-- else
-  = image_tag "bottle3.jpg"
-
-%p
-  = @product.name
-%p
-  = @product.description
-%p
-  = @product.price
-  
-.row.mt-20
-  .col.m12.s12.center
+%h2.text-center  商品詳細
+.cssgrid2
+  #cel.d-inline-block.border
+    .d-inline-block.w-100.h-50
+      - if @product.image.url.present?
+        = image_tag @product.image.url
+      - else
+        = image_tag "bottle3.jpg"
+    .product
+      %span 商品名：
+      %span= @product.name
+      %br
+      %span 商品説明：
+      %span= @product.description
+      %br
+      %span 価格：
+      %span= @product.price
+      %br
     = link_to product_add_to_baskets_path(@product), method: :post do
-      .btn.btn-large.productDetail__btn
-        買い物かごに入れる
+      .mt-1.border-0.btn.btn-warning 買い物かごに入れる
+    - if current_admin.present?
+      = link_to  edit_admins_product_path(@product), method: :get do
+        .btn.btn-danger.mt-1 編集
+      = link_to admins_product_path(@product), method: :delete do
+        .btn.btn-danger.mt-1 消去

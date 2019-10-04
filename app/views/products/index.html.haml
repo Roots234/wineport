@@ -1,15 +1,22 @@
-%h2.center 商品一覧
-.products
-  .row
-    - @products.each do |product|
-      .col.s12.m6
-        .card
-          .card-image
-            - if product.image.present?
-              = image_tag product.image_url
-            %span.card-title
-              = link_to product.name, product_path(product.id)
-              #{product.price}
-          .card-content
-            %p
-              = product.description
+%h2.text-center.pt-2 取り扱いワイン一覧
+#columnl.d-inline-block.float-left.border-right
+  .m-1
+    = search_form_for @q,url: root_path do |f|
+      = f.label :name, "商品名を含む" 
+      = f.search_field :name_cont 
+      = f.submit
+.cssgrid.border-0
+  - @products.each do |product|
+    #product.d-inline-block.border-bottom
+      #productimg.d-inline-block.pt-4
+        - if product.image.present?
+          = image_tag product.image_url
+        - else
+          = link_to(image_tag("/no-image-min.jpg"),product)
+      .product.cover-text.d-grid
+        %p
+          = link_to product.name, product_path(product.id)
+        %span.text-danger #{product.price} 円
+        %br
+        %span
+          = product.description
