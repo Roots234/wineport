@@ -1,0 +1,16 @@
+current directory: /home/ec2-user/environment/wineport/vendor/bundle/ruby/2.6.0/gems/hamlit-2.10.0/ext/hamlit
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/bin/ruby -I /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191004-6290-1yoflrx.rb extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/environment/wineport/vendor/bundle/ruby/2.6.0/gems/hamlit-2.10.0/ext/hamlit
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/wineport/vendor/bundle/ruby/2.6.0/gems/hamlit-2.10.0/ext/hamlit
+make "DESTDIR="
+compiling hamlit.c
+compiling hescape.c
+linking shared-object hamlit/hamlit.so
+
+current directory: /home/ec2-user/environment/wineport/vendor/bundle/ruby/2.6.0/gems/hamlit-2.10.0/ext/hamlit
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 hamlit.so ./.gem.20191004-6290-y2tn0w/hamlit

@@ -52,6 +52,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'mysql2'
+  gem 'dotenv-rails'
   
 end
 
