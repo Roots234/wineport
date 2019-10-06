@@ -38,6 +38,7 @@ gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'hashid-rails', '~> 1.0'
 gem "ransack"
+gem "fog-aws",'~>3.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -53,6 +54,9 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'mysql2'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
   
 end
 
