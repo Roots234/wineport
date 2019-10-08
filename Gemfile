@@ -39,6 +39,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'hashid-rails', '~> 1.0'
 gem "ransack"
 gem "fog-aws",'~>3.0.0'
+gem 'mini_magick', '~> 4.8'
+gem 'kaminari', '~> 0.17.0'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

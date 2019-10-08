@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
   
   def index
-    @products = Product.all
+    
+    @products = Product.page(params[:page]).per(30)
     if @q = Product.ransack(params[:q])
-      @products = @q.result
+      @products = @q.result.page(params[:page]).per(30)
     end
   end
   
