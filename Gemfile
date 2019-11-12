@@ -40,7 +40,6 @@ gem 'ransack'
 gem 'fog-aws'
 gem 'mini_magick', '~> 4.8'
 gem 'kaminari', '~> 0.17.0'
-gem 'faker'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'rails-i18n', '~> 5.1'
@@ -62,6 +61,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails', "~> 4.10.0"
   gem 'rails-controller-testing'
+  gem 'rubocop', require: false
+  gem 'rubocop-rails'
   
 end
 
