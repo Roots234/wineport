@@ -439,3 +439,380 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 435ms (Views: 340.9ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for 172.29.0.1 at 2019-11-12 00:31:13 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (1665.8ms)
+Completed 200 OK in 2687ms (Views: 2605.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/users/sign_in" for 172.29.0.1 at 2019-11-12 04:49:16 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered users/sessions/new.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 170ms (Views: 141.2ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/users/sign_in" for 172.29.0.1 at 2019-11-12 04:49:39 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3I4+IkoWGK4ON561hMwXd721gbYfguHIH8skO6+jHQTowx+aPiHCqsbnDIfz1ytoN1biTCtGORs29hozOoEpXA==", "user"=>{"email"=>"crazysimpleplanperfect@yahoo.co.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'crazysimpleplanperfect@yahoo.co.jp' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 190ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 172.29.0.1 at 2019-11-12 04:49:39 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 132ms (Views: 131.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener" for 172.30.0.1 at 2019-11-12 05:12:07 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (9.3ms)
+Completed 200 OK in 844ms (Views: 822.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1573517043_0246835_0b0bfe6/rich" for 172.30.0.1 at 2019-11-12 05:12:08 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1573517043_0246835_0b0bfe6", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 75ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener" for 172.30.0.1 at 2019-11-12 05:12:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (5.2ms)
+Completed 200 OK in 72ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1573517043_0246835_0b0bfe6/rich" for 172.30.0.1 at 2019-11-12 05:12:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1573517043_0246835_0b0bfe6", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.2ms)
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 172.30.0.1 at 2019-11-12 05:12:18 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.haml within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_users_registrations_new_html_haml__863982775257797759_47194719324540 at /myapp/app/views/users/registrations/new.html.haml:6)
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.haml within layouts/application (1555.7ms)
+Completed 200 OK in 1762ms (Views: 1718.5ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/users" for 172.30.0.1 at 2019-11-12 05:12:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M5zVt3jNPOIIX5x/aMUG+gfUEuCKTq3RyvxDcmNBzb5MC5t5lI585U78uhkEKPTa+fgjloyFACxiBn+elY5Pbw==", "user"=>{"email"=>"crazysimpleplanperfect@yahoo.co.jp", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'crazysimpleplanperfect@yahoo.co.jp' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/registrations/new.html.haml within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_users_registrations_new_html_haml__863982775257797759_70172451316020 at /myapp/app/views/users/registrations/new.html.haml:6)
+  Rendered /usr/local/bundle/gems/devise-i18n-1.8.2/app/views/devise/shared/_error_messages.html.erb (1.2ms)
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 375ms (Views: 127.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 172.30.0.1 at 2019-11-12 05:12:48 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yBwDXSuNYpAyGUgvn2c9Pf1CeJPj0ocsBv5711voxNFLDuCrv2JhPMja9maJU2fNKmFHzHFh1VwfH8t0d9/UcQ==", "user"=>{"email"=>"crazy@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウント登録"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'crazy@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `confirmation_token`, `confirmation_sent_at`, `created_at`, `updated_at`) VALUES ('crazy@gmail.com', '$2a$11$zFCPp01bsEepYoTByNC9HuMX7dfPBwFkjlitjazr7Ak0ia.gCaMFu', 'vYcZ6JiDSGJ73Ec4x62C', '2019-11-12 05:12:48', '2019-11-12 05:12:48', '2019-11-12 05:12:48')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering users/mailer/confirmation_instructions.html.haml
+  Rendered users/mailer/confirmation_instructions.html.haml (2.6ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 405.5ms
+Sent mail to crazy@gmail.com (24.8ms)
+Date: Tue, 12 Nov 2019 05:12:49 +0000
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: crazy@gmail.com
+Message-ID: <5dca3f511ba3f_12aec60bc58dc66882@f4c8baf32987.mail>
+Subject: =?UTF-8?Q?=E3=82=A2=E3=82=AB=E3=82=A6=E3=83=B3=E3=83=88=E3=81=AE=E6=9C=89=E5=8A=B9=E5=8C=96=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+Y3JhenlAZ21haWwuY29t5qeYPC9wPg0KPHA+5Lul5LiL44Gu44Oq44Oz
+44Kv44KS44Kv44Oq44OD44Kv44GX44CB44Oh44O844Or44Ki44OJ44Os44K5
+44Gu56K66KqN5omL57aa44KS5a6M5LqG44GV44Gb44Gm44GP44Gg44GV44GE
+44CCPC9wPg0KPHA+PGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdDozMDAwL3Vz
+ZXJzL2NvbmZpcm1hdGlvbj9jb25maXJtYXRpb25fdG9rZW49dlljWjZKaURT
+R0o3M0VjNHg2MkMiPi5hY3Rpb248L2E+PC9wPg0K
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 994ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 172.30.0.1 at 2019-11-12 05:12:49 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (208.5ms)
+Completed 200 OK in 373ms (Views: 294.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/letter_opener" for 172.30.0.1 at 2019-11-12 05:12:52 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (5.9ms)
+Completed 200 OK in 45ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1573535569_1148522_85ef13d/rich" for 172.30.0.1 at 2019-11-12 05:12:52 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1573535569_1148522_85ef13d", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.2ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=vYcZ6JiDSGJ73Ec4x62C" for 172.30.0.1 at 2019-11-12 05:12:54 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"vYcZ6JiDSGJ73Ec4x62C"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'vYcZ6JiDSGJ73Ec4x62C' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE `users` SET `confirmed_at` = '2019-11-12 05:12:54', `updated_at` = '2019-11-12 05:12:54' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 27ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/sign_in" for 172.30.0.1 at 2019-11-12 05:12:54 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.haml within layouts/application (24.2ms)
+Completed 200 OK in 157ms (Views: 155.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.30.0.1 at 2019-11-12 05:12:59 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cblW/OU8F8skHgKCUETlC65Z6OEoCToXgimEruTZVL7yq7UKcdMUZ97dvMtGcL/7eXrXvrq6aGebyDQNyO5EHg==", "user"=>{"email"=>"crazy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'crazy@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 173ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 172.30.0.1 at 2019-11-12 05:13:00 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (209.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 376ms (Views: 343.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/3" for 172.30.0.1 at 2019-11-12 05:13:03 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (4.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 150ms (Views: 109.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/products/g8Lumg/add_to_baskets" for 172.30.0.1 at 2019-11-12 05:13:05 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Products::AddToBasketsController#create as HTML
+  Parameters: {"authenticity_token"=>"nMbHbOErds/7NePZls9Jg5ME6AsWXC9aOdvFDRua5vRa8WX5v5vmKKHrHtJ5wKgR3296e+65N7J5Dm591IYziA==", "product_id"=>"g8Lumg"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `baskets` (`user_id`, `created_at`, `updated_at`) VALUES (2, '2019-11-12 05:13:05', '2019-11-12 05:13:05')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `basket_products` (`basket_id`, `product_id`, `created_at`, `updated_at`) VALUES (1, 3, '2019-11-12 05:13:05', '2019-11-12 05:13:05')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/basket
+Completed 302 Found in 216ms (ActiveRecord: 26.4ms)
+
+
+Started GET "/basket" for 172.30.0.1 at 2019-11-12 05:13:05 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.4ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 163ms (Views: 115.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/basket" for 172.30.0.1 at 2019-11-12 05:13:08 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 154ms (Views: 120.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/charge" for 172.30.0.1 at 2019-11-12 05:13:10 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vPVH56GRlV0vxJpIQF3ToEVfbFk6SHl05BZmHn6xbMRH0xNv//DL44pjRCPMdjhid/Z0YnSY6ORXiyH7DoJcqQ==", "product_ids"=>["3"], "commit"=>"決済"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.7ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1 AND `products`.`id` = 3[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBasketProduct Load (0.9ms)[0m  [1m[34mSELECT `basket_products`.* FROM `basket_products` WHERE `basket_products`.`basket_id` = 1 AND `basket_products`.`product_id` = 3[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM `basket_products` WHERE `basket_products`.`id` = 1[0m
+  [1m[36mPurchaseRecord Load (0.7ms)[0m  [1m[34mSELECT  `purchase_records`.* FROM `purchase_records` WHERE `purchase_records`.`user_id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `purchase_records` (`user_id`, `created_at`, `updated_at`) VALUES (2, '2019-11-12 05:13:10', '2019-11-12 05:13:10')[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `purchase_record_products` (`purchase_record_id`, `product_id`, `created_at`, `updated_at`) VALUES (1, 3, '2019-11-12 05:13:11', '2019-11-12 05:13:11')[0m
+  Rendering sample_mailer/send_when_pay.html.haml within layouts/mailer
+  Rendered sample_mailer/send_when_pay.html.haml within layouts/mailer (2.4ms)
+  Rendering sample_mailer/send_when_pay.text.haml within layouts/mailer
+  Rendered sample_mailer/send_when_pay.text.haml within layouts/mailer (1.4ms)
+SampleMailer#send_when_pay: processed outbound mail in 251.6ms
+Sent mail to crazy@gmail.com (22.2ms)
+Date: Tue, 12 Nov 2019 05:13:11 +0000
+From: wineport
+Reply-To: crazysimpleplanperfect@gmail.com
+To: crazy@gmail.com
+Message-ID: <5dca3f6754e10_12aec60bc573867078@f4c8baf32987.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E8=B2=B7=E3=81=84=E4=B8=8A=E3=81=92=E3=81=82=E3=82=8A=E3=81=8C=E3=81=A8=E3=81=86=E3=81=94=E3=81=96=E3=81=84=E3=81=BE=E3=81=99?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5dca3f6753373_12aec60bc573866926";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5dca3f6753373_12aec60bc573866926
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCjwlPSBAY3VycmVudF91
+c2VyLm5hbWUgJT7mp5gNCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+DQrjgZPjgpPjgavjgaHjga/vvIEgPCU9IEBjdXJyZW50X3VzZXIubmFtZSAl
+PuOBleOCkw0KDQo=
+
+----==_mimepart_5dca3f6753373_12aec60bc573866926
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KPG1ldGEgY29udGVu
+dD0ndGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04JyBodHRwLWVxdWl2PSdDb250
+ZW50LVR5cGUnPg0KPHN0eWxlPg0KICAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0
+byBiZSBpbmxpbmUgKi8NCjwvc3R5bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCjwh
+RE9DVFlQRSBodG1sPg0KPGh0bWw+DQo8aGVhZD4NCjxtZXRhIGNvbnRlbnQ9
+J3RleHQvaHRtbDsgY2hhcnNldD1VVEYtOCcgaHR0cC1lcXVpdj0nQ29udGVu
+dC1UeXBlJz4NCjwvaGVhZD4NCjxib2R5Pg0KPGgyPmNyYXp5QGdtYWlsLmNv
+beanmDwvaDI+DQo8cD7jgZPjga7luqbjga9XaW5lcG9ydOOCkuOBlOWIqeeU
+qOOBhOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOA
+gjwvcD4NCjxwPuOBiuiyt+OBhOS4iuOBkumHkemhjeOBr+WQiOioiOOAgDM4
+NDcx44CA5YaG44Go44Gq44KK44G+44GZ44CCPC9wPg0KPHA+5rG65riI5pa5
+5rOV44Gv44CM5Luj6YeR5byV5o+b44CN44Go44Gq44Gj44Gm44GK44KK44G+
+44GZ44Gu44Gn44CB5ZWG5ZOB44Gu44GU5Yiw552A44G+44Gn44Gr54++6YeR
+44Gu44GU55So5oSP44KS44GK6aGY44GE44GE44Gf44GX44G+44GZ44CCPC9w
+Pg0KPHA+5ZWG5ZOB44Gu5LiN5YKZ44CB6YWN6YCB44OI44Op44OW44Or44CB
+44Gd44Gu5LuW44GU6LOq5ZWP44Gq44Gp44GU44GW44GE44G+44GX44Gf44KJ
+44CB44GK5rCX6Lu944Gr44GU6L+U5L+h44GP44Gg44GV44GE44CCPC9wPg0K
+PHA+5LuK5b6M44Go44KC44KI44KN44GX44GP44GK6aGY44GE44GE44Gf44GX
+44G+44GZ44CCPC9wPg0KPC9ib2R5Pg0KPC9odG1sPg0KDQo8L2JvZHk+DQo8
+L2h0bWw+DQo=
+
+----==_mimepart_5dca3f6753373_12aec60bc573866926--
+
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 489ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/" for 172.30.0.1 at 2019-11-12 05:13:11 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (216.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 359ms (Views: 335.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/letter_opener" for 172.30.0.1 at 2019-11-12 05:13:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (12.7ms)
+Completed 200 OK in 77ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1573535591_3487692_d118949/rich" for 172.30.0.1 at 2019-11-12 05:13:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1573535591_3487692_d118949", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 34ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1573535569_1148522_85ef13d/rich" for 172.30.0.1 at 2019-11-12 05:13:29 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1573535569_1148522_85ef13d", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
