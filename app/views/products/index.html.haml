@@ -1,0 +1,25 @@
+#container
+  %h4#title 
+    取り扱いワイン一覧(
+    = page_entries_info @products
+    )
+  #sidebar.text-center
+    = search_form_for @q, url: root_path do |f|
+      = f.search_field :name_cont, class:'searchform', :placeholder => "名前を入れて検索"
+      = f.submit class:'submitbutton'
+  #main
+    - @products.each do |product|
+      #item.border-bottom
+        %p#productimg
+          - if product.image.present?
+            = image_tag product.image_url
+          - else
+            = link_to(image_tag("/no-image-min.jpg"),product)
+        %p.w-auto
+          = link_to product.name, product_path(product.id)
+        %span.text-danger #{product.price} 円
+        %br
+        %span.w-auto.overflow-hidden
+          = product.description
+#paginate
+  = paginate @products
