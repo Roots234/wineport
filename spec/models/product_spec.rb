@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
      
     it "is valid with a name, description, admin_id,image and price" do
+      FactoryBot.create(:admin)
       product = FactoryBot.build(:product)
       expect(product).to be_valid
     end

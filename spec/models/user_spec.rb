@@ -14,20 +14,20 @@ RSpec.describe User, type: :model do
     it "is invalid without email" do
       user = FactoryBot.build(:user, email: nil)
       user.valid?
-      expect(user.errors[:email]).to include("を入力してください")
+      expect(user.errors[:email]).to include("が入力されていません。")
     end
     
     it "is invalid without password" do
       user = FactoryBot.build(:user, password: nil)
       user.valid?
-      expect(user.errors[:password]).to include("を入力してください")
+      expect(user.errors[:password]).to include("が入力されていません。")
     end
 
     it "is invalid with a duplicate email address" do
       FactoryBot.create(:user)
       user = FactoryBot.build(:user)
       user.valid?
-      expect(user.errors[:email]).to include("はすでに存在します")
+      expect(user.errors[:email]).to include("は既に使用されています。")
     end
     
    
