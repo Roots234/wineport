@@ -1,20 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Admin, type: :model do
+
+  before do 
+    @admin = FactoryBot.build(:admin)
+  end
     
+  describe 'validation' do
     it "has a valid factory" do
-        expect(FactoryBot.build(:admin)).to be_valid
-    end
-     
-    it "is valid with a email, and password" do
-       admin = FactoryBot.build(:admin)
-       expect(admin).to be_valid
+        expect(@admin).to be_valid
     end
      
     it "is invalid without email" do
-      admin = FactoryBot.build(:admin, email: nil)
-      admin.valid?
-      expect(admin.errors[:email]).to include("が入力されていません。")
+      @admin.email = "nil"
+      @admin.valid?
+      expect(@admin.errors[:email]).to include("は有効でありません。")
     end
     
     it "is invalid without password" do
@@ -29,6 +29,6 @@ RSpec.describe Admin, type: :model do
       admin.valid?
       expect(admin.errors[:email]).to include("は既に使用されています。")
    end
-   
+  end   
    
 end

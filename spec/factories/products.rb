@@ -7,5 +7,6 @@ FactoryBot.define do
     price 101010
     admin_id 1
     created_at Time.now()
+    association :admin
   end
 end
