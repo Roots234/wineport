@@ -58,7 +58,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'mysql2'
   gem 'dotenv-rails'
-  gem 'rspec-rails', '~> 3.6'
+  gem 'rspec-rails', '~> 3.7'
   gem 'factory_bot_rails', "~> 4.10.0"
   gem 'rails-controller-testing'
   gem 'rubocop', require: false
@@ -68,8 +68,10 @@ end
 
 group :test do
   gem 'capybara', '~> 2.15.2'
-  gem 'webdrivers'
-  gem 'database_cleaner'
+  gem 'database_cleaner'  
+  gem 'selenium-webdriver'
+
+
 end
 
 group :development do

@@ -18,9 +18,9 @@ RSpec.describe Admin, type: :model do
     end
     
     it "is invalid without password" do
-      admin = FactoryBot.build(:admin, password: nil)
-      admin.valid?
-      expect(admin.errors[:password]).to include("が入力されていません。")
+      @admin.password = ""
+      @admin.valid?
+      expect(@admin.errors[:password]).to include("が入力されていません。")
     end
 
     it "is invalid with a duplicate email address" do
