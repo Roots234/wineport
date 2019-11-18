@@ -23,7 +23,6 @@ RSpec.feature 'product_register', type: :feature do
         click_link '登録する'
         click_link 'ログアウト'
       }
-      binding.pry
       
     end
   end
