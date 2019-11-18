@@ -4,12 +4,14 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+if Rails.env.production?
+  abort('The Rails environment is running in production mode!')
+end
 
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
-require "selenium-webdriver"
+require 'selenium-webdriver'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -38,17 +40,13 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 RSpec.configure do |config|
-
   Capybara.configure do |config|
-    config.server_host = "192.168.176.5" # hostname -i で調べた値
+    config.server_host = '192.168.176.5' # hostname -i で調べた値
     config.server_port = 3000
     config.javascript_driver = :selenium_chrome_headless
   end
-
-
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -70,6 +68,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.before(:suite) do
-    DatabaseCleaner.clean_with :truncation  # テスト開始時にDBをクリーンにする
+    DatabaseCleaner.clean_with :truncation # テスト開始時にDBをクリーンにする
   end
 end

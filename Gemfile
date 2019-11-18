@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
@@ -27,64 +26,61 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'devise'
-gem 'haml-rails'
-gem 'erb2haml'
-gem 'hamlit'
 gem 'bootstrap', '~> 4.3.1'
-gem 'simple_form'
-gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
-gem 'hashid-rails', '~> 1.0'
-gem 'ransack'
-gem 'fog-aws'
-gem 'mini_magick', '~> 4.8'
-gem 'kaminari', '~> 0.17.0'
+gem 'devise'
+gem 'devise-bootstrap-views', '~> 1.0'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-gem 'rails-i18n', '~> 5.1'
+gem 'erb2haml'
+gem 'fog-aws'
 gem 'font-awesome-rails'
-gem 'devise-bootstrap-views', '~> 1.0'
+gem 'haml-rails'
+gem 'hamlit'
+gem 'hashid-rails', '~> 1.0'
+gem 'jquery-rails'
+gem 'kaminari', '~> 0.17.0'
+gem 'mini_magick', '~> 4.8'
+gem 'rails-i18n', '~> 5.1'
+gem 'ransack'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'faker'
-  gem 'pry-rails'
-  gem 'pry-byebug'
-  gem 'mysql2'
   gem 'dotenv-rails'
-  gem 'rspec-rails', '~> 3.7'
-  gem 'factory_bot_rails', "~> 4.10.0"
+  gem 'factory_bot_rails', '~> 4.10.0'
+  gem 'faker'
+  gem 'mysql2'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.7'
   gem 'rubocop', require: false
   gem 'rubocop-rails'
-  
 end
 
 group :test do
   gem 'capybara', '~> 2.15.2'
-  gem 'database_cleaner'  
+  gem 'database_cleaner'
   gem 'selenium-webdriver'
-
-
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'annotate'
   gem 'letter_opener'
   gem 'letter_opener_web', '~> 1.0'
-  gem 'annotate'
+  gem 'spring'
   gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :production do
@@ -92,4 +88,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
