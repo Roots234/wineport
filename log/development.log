@@ -1085,3 +1085,229 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 301ms (Views: 280.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 192.168.192.1 at 2019-11-18 06:57:12 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (190.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 346ms (Views: 324.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/sign_in" for 192.168.192.1 at 2019-11-18 07:00:02 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNW94f+B1ncjViEsr3OKDnzG7n2MuytLpnhp33MvVtkTocPGKbhb0EGuDrV8yD/DbqA+1bywOFBhWiAjvm7FcA==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 192.168.192.1 at 2019-11-18 07:00:02 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (151.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 284ms (Views: 252.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins/sign_in" for 192.168.192.1 at 2019-11-18 07:00:08 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (10.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 141ms (Views: 112.0ms | ActiveRecord: 18.1ms)
+
+
+Started POST "/admins/sign_in" for 192.168.192.1 at 2019-11-18 07:00:39 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3OiggjeqnDJ/dVBvPzf5uxyv9tbvUohpzc20Lk1eh2N0hlETFsMud+xv6OuckS6P0DswQD9rcSuXxcDxdHGxpQ==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 134ms (ActiveRecord: 2.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3OiggjeqnDJ/dVBvPzf5uxyv9tbvUohpzc20Lk1eh2N0hlETFsMud+xv6OuckS6P0DswQD9rcSuXxcDxdHGxpQ==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (11.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 265ms (Views: 148.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admins/sign_in" for 192.168.192.1 at 2019-11-18 07:00:46 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PoywjTgGotJKpm8CWOAOLAfwh5bh+4WYpNav2dZsFoaAzxZzssTH/CbwjALzj1+bnWouUG4RBfcb+zbsq99SAw==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admins
+Completed 302 Found in 145ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admins" for 192.168.192.1 at 2019-11-18 07:00:46 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::DashboardsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` ORDER BY `admins`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `purchase_record_products` ON `purchase_record_products`.`product_id` = `products`.`id` WHERE `products`.`admin_id` = 1[0m
+  Rendering admins/dashboards/index.html.haml within layouts/application
+  Rendered admins/dashboards/index.html.haml within layouts/application (2.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 142ms (Views: 102.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admins/products/new" for 192.168.192.1 at 2019-11-18 07:01:06 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::ProductsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y7Kc/Y2IOeSLBEDRu1e6T9WcN5vNda3xESGyhLEVdT2QYPtoo0OTBh8IWiApUQEXUC1EHYrlUT/t0Z/uabPJNQ=="}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendering admins/products/new.html.haml within layouts/application
+  Rendered admins/products/new.html.haml within layouts/application (172.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 298ms (Views: 269.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/1" for 192.168.192.1 at 2019-11-18 07:59:24 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/show.html.haml within layouts/application (17.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 149ms (Views: 127.3ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 192.168.192.1 at 2019-11-18 08:26:05 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FsUihgjzSta017ZionIG9fsb/DyqfwojcQAAqUcE2xblF0UTJjjgNCDbrJMwdL2tfqqPuu3v9u2N8C3Dn6JnHg=="}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 192.168.192.1 at 2019-11-18 08:26:05 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (206.5ms)
+Completed 200 OK in 337ms (Views: 315.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/sign_in" for 192.168.192.1 at 2019-11-18 08:26:06 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 143ms (Views: 141.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 192.168.192.1 at 2019-11-18 08:26:27 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"09IvQmr4m9vCVP054pyHlN8SMgjky/hGGgX+7E8Sqr9vi79Mq95Z+lucOTv91ej/a07ym5vN+8sq8NlpR+8kew==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admins
+Completed 302 Found in 139ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admins" for 192.168.192.1 at 2019-11-18 08:26:27 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::DashboardsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` ORDER BY `admins`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `purchase_record_products` ON `purchase_record_products`.`product_id` = `products`.`id` WHERE `products`.`admin_id` = 1[0m
+  Rendering admins/dashboards/index.html.haml within layouts/application
+  Rendered admins/dashboards/index.html.haml within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 125ms (Views: 98.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admins/products/new" for 192.168.192.1 at 2019-11-18 08:29:53 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::ProductsController#new as HTML
+  Parameters: {"authenticity_token"=>"DkqWOs2Y8zKepEZIDtYXRtta0cijaTmzOuo+goxFNPyacln8zS7ve+TcqVsarjCQCCzc7pQdZy7rU9XUSiKhRw=="}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendering admins/products/new.html.haml within layouts/application
+  Rendered admins/products/new.html.haml within layouts/application (80.7ms)
+Completed 200 OK in 192ms (Views: 166.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/products/new" for 192.168.192.1 at 2019-11-18 09:04:18 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::ProductsController#new as HTML
+  Parameters: {"authenticity_token"=>"xUTeVbCr+2XQUImdfq6P9veT7e/CwVpkxGJLkeA4W9pRfBGTsB3nLKooZo5q1qggJOXgyfW1BPkV26DHJl/OYQ=="}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendering admins/products/new.html.haml within layouts/application
+  Rendered admins/products/new.html.haml within layouts/application (75.8ms)
+Completed 200 OK in 319ms (Views: 245.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/admins/sign_out" for 192.168.192.1 at 2019-11-18 09:07:15 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2VNwhL4+kXCITYRegCIQkkEiOmK6aGlW6bb8KYzoAqxNa79CvoiNOfI1a02UWjdEklQ3RI0cN8s4Dxd/So+XFw=="}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 192.168.192.1 at 2019-11-18 09:07:15 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (201.6ms)
+Completed 200 OK in 345ms (Views: 312.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins/sign_in" for 192.168.192.1 at 2019-11-18 09:07:18 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 124ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 192.168.192.1 at 2019-11-18 09:09:08 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ldgl64v5SNzjLsXmhQ23b+9iKUzfNFQeimi08NSa/L7wvEFqeEyuTVQc+3ND0+qCerrCwMF+JBfClqUP3YVuwg==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admins
+Completed 302 Found in 160ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admins" for 192.168.192.1 at 2019-11-18 09:09:08 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::DashboardsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` ORDER BY `admins`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `purchase_record_products` ON `purchase_record_products`.`product_id` = `products`.`id` WHERE `products`.`admin_id` = 1[0m
+  Rendering admins/dashboards/index.html.haml within layouts/application
+  Rendered admins/dashboards/index.html.haml within layouts/application (7.0ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 180ms (Views: 147.5ms | ActiveRecord: 2.1ms)
+
+

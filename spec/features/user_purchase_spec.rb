@@ -6,7 +6,6 @@ RSpec.feature 'user_purchase', type: :feature do
   before do
     @user = FactoryBot.create(:user)
     @product = FactoryBot.create(:product)
-    @admin = FactoryBot.create(:admin)
   end
 
   describe 'user_purchase_scenario' do
