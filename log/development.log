@@ -1311,3 +1311,25 @@ Processing by Admins::DashboardsController#index as HTML
 Completed 200 OK in 180ms (Views: 147.5ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/products/1" for 192.168.192.1 at 2019-11-18 18:29:16 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (3.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/show.html.haml within layouts/application (82.8ms)
+Completed 200 OK in 383ms (Views: 267.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/products/1" for 192.168.192.1 at 2019-11-18 18:29:27 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/show.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 196ms (Views: 168.1ms | ActiveRecord: 1.3ms)
+
+

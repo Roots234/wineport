@@ -1,24 +1,22 @@
-# README
+# Wineport(ワインポート)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ワインを販売するサイトです。
 
-Things you may want to cover:
+[機能一覧]
+* 記事一覧表示機能
+* 記事詳細表示機能
+* 記事投稿機能（Adminのみ可）
+* 管理ユーザログイン機能（Adminのみ可）
+* 画像ファイルアップロード機能（Adminのみ可）
+* DBテーブルのリレーション管理
+* DBトランザクションの制御機能
+* ページネーション機能
+* キーワード検索機能
+* 単体テスト機能
+* 統合テスト機能
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[操作方法]
+* Admin
+  →簡単ログイン
+    →
+* 
