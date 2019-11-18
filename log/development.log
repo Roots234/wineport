@@ -859,3 +859,229 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 188ms (Views: 171.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 192.168.192.1 at 2019-11-18 06:36:36 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (1900.1ms)
+Completed 200 OK in 4764ms (Views: 4673.7ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/products/1" for 192.168.192.1 at 2019-11-18 06:36:45 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 120ms (Views: 86.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/products/XYOuNp/add_to_baskets" for 192.168.192.1 at 2019-11-18 06:40:35 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Products::AddToBasketsController#create as HTML
+  Parameters: {"authenticity_token"=>"uIeTl4IIPUCowmJtpC52Z+axdJ3OCSsMgOxpn1lCr+Q1Y8o8xAAwWzdSvVQhCp0ikEEFR/QsvZzzgNhnT4V0Ng==", "product_id"=>"XYOuNp"}
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.192.1 at 2019-11-18 06:40:35 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/new.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 138ms (Views: 110.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/users/sign_in" for 192.168.192.1 at 2019-11-18 06:40:39 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 126ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.192.1 at 2019-11-18 06:40:45 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t2mJWEFtiPGUqlF+G2kK8TCRoh2535rkuTX3Qafh4bUcHfd/l1QFVvZSfufI0r88IvdytYnUif9+F769aqByHA==", "user"=>{"email"=>"crazysimpleplanperfect@yahoo.co.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'crazysimpleplanperfect@yahoo.co.jp' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 401 Unauthorized in 220ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.192.1 at 2019-11-18 06:40:46 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 115ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.192.1 at 2019-11-18 06:40:54 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ruVfmbsKXG62xQp2TAGnoem5ESFNgkFD96bFc8IkYAMjAQYy/QJRdSlV1U/JJUzkn0lg+3en19OEynSL1OO70Q==", "user"=>{"email"=>"perfect@yahoo.co.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'perfect@yahoo.co.jp' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ruVfmbsKXG62xQp2TAGnoem5ESFNgkFD96bFc8IkYAMjAQYy/QJRdSlV1U/JJUzkn0lg+3en19OEynSL1OO70Q==", "user"=>{"email"=>"perfect@yahoo.co.jp", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering users/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 208ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.192.1 at 2019-11-18 06:41:09 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdMsy+8L6lI1VvBE/rhgg/9REOOSNBidNyjg1eifyAD8N3VgqQPnSarGL317nIvGiaFhOagRjg1ERFEt/lgT0g==", "user"=>{"email"=>"crazy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'crazy@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 192.168.192.1 at 2019-11-18 06:41:09 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (162.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 281ms (Views: 261.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/1" for 192.168.192.1 at 2019-11-18 06:41:12 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 117ms (Views: 93.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products/XYOuNp/add_to_baskets" for 192.168.192.1 at 2019-11-18 06:41:13 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Products::AddToBasketsController#create as HTML
+  Parameters: {"authenticity_token"=>"z/s48x3YQpg1HrfGtW0qriPh48eT1ce7rpH/DXiRTLBxuJ4NlxontllIVMYeAnsZuXtKARw/R9QRvGY4BSIINQ==", "product_id"=>"XYOuNp"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (1.9ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (9.9ms)[0m  [1m[32mINSERT INTO `basket_products` (`basket_id`, `product_id`, `created_at`, `updated_at`) VALUES (1, 1, '2019-11-18 06:41:13', '2019-11-18 06:41:13')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/basket
+Completed 302 Found in 191ms (ActiveRecord: 46.7ms)
+
+
+Started GET "/basket" for 192.168.192.1 at 2019-11-18 06:41:13 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 145ms (Views: 94.0ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/charge" for 192.168.192.1 at 2019-11-18 06:46:33 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ChargesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5RXMFTsuJC0SWIdJ6Q7WHeZqr+2DLnQVI9aUS474JypbVmrrsexBA34OZElCYYeqfPAGKwzE9Hqc+w1+80tjrw==", "product_ids"=>["1"], "commit"=>"決済"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.9ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1 AND `products`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBasketProduct Load (1.5ms)[0m  [1m[34mSELECT `basket_products`.* FROM `basket_products` WHERE `basket_products`.`basket_id` = 1 AND `basket_products`.`product_id` = 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM `basket_products` WHERE `basket_products`.`id` = 1[0m
+  [1m[36mPurchaseRecord Load (1.7ms)[0m  [1m[34mSELECT  `purchase_records`.* FROM `purchase_records` WHERE `purchase_records`.`user_id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO `purchase_record_products` (`purchase_record_id`, `product_id`, `created_at`, `updated_at`) VALUES (1, 1, '2019-11-18 06:46:34', '2019-11-18 06:46:34')[0m
+  Rendering sample_mailer/send_when_pay.html.haml within layouts/mailer
+  Rendered sample_mailer/send_when_pay.html.haml within layouts/mailer (2.9ms)
+  Rendering sample_mailer/send_when_pay.text.haml within layouts/mailer
+  Rendered sample_mailer/send_when_pay.text.haml within layouts/mailer (1.7ms)
+SampleMailer#send_when_pay: processed outbound mail in 447.7ms
+Sent mail to crazy@gmail.com (50.1ms)
+Date: Mon, 18 Nov 2019 06:46:34 +0000
+From: wineport
+Reply-To: crazysimpleplanperfect@gmail.com
+To: crazy@gmail.com
+Message-ID: <5dd23e4ad691d_12b0031416db8654e2@7b8fb2635658.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E8=B2=B7=E3=81=84=E4=B8=8A=E3=81=92=E3=81=82=E3=82=8A=E3=81=8C=E3=81=A8=E3=81=86=E3=81=94=E3=81=96=E3=81=84=E3=81=BE=E3=81=99?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5dd23e4ad2b49_12b0031416db8653a1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5dd23e4ad2b49_12b0031416db8653a1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCjwlPSBAY3VycmVudF91
+c2VyLm5hbWUgJT7mp5gNCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+DQrjgZPjgpPjgavjgaHjga/vvIEgPCU9IEBjdXJyZW50X3VzZXIubmFtZSAl
+PuOBleOCkw0KDQo=
+
+----==_mimepart_5dd23e4ad2b49_12b0031416db8653a1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KPG1ldGEgY29udGVu
+dD0ndGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04JyBodHRwLWVxdWl2PSdDb250
+ZW50LVR5cGUnPg0KPHN0eWxlPg0KICAvKiBFbWFpbCBzdHlsZXMgbmVlZCB0
+byBiZSBpbmxpbmUgKi8NCjwvc3R5bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCjwh
+RE9DVFlQRSBodG1sPg0KPGh0bWw+DQo8aGVhZD4NCjxtZXRhIGNvbnRlbnQ9
+J3RleHQvaHRtbDsgY2hhcnNldD1VVEYtOCcgaHR0cC1lcXVpdj0nQ29udGVu
+dC1UeXBlJz4NCjwvaGVhZD4NCjxib2R5Pg0KPGgyPmNyYXp5QGdtYWlsLmNv
+beanmDwvaDI+DQo8cD7jgZPjga7luqbjga9XaW5lcG9ydOOCkuOBlOWIqeeU
+qOOBhOOBn+OBoOOBjeOBguOCiuOBjOOBqOOBhuOBlOOBluOBhOOBvuOBmeOA
+gjwvcD4NCjxwPuOBiuiyt+OBhOS4iuOBkumHkemhjeOBr+WQiOioiOOAgDgz
+ODMy44CA5YaG44Go44Gq44KK44G+44GZ44CCPC9wPg0KPHA+5rG65riI5pa5
+5rOV44Gv44CM5Luj6YeR5byV5o+b44CN44Go44Gq44Gj44Gm44GK44KK44G+
+44GZ44Gu44Gn44CB5ZWG5ZOB44Gu44GU5Yiw552A44G+44Gn44Gr54++6YeR
+44Gu44GU55So5oSP44KS44GK6aGY44GE44GE44Gf44GX44G+44GZ44CCPC9w
+Pg0KPHA+5ZWG5ZOB44Gu5LiN5YKZ44CB6YWN6YCB44OI44Op44OW44Or44CB
+44Gd44Gu5LuW44GU6LOq5ZWP44Gq44Gp44GU44GW44GE44G+44GX44Gf44KJ
+44CB44GK5rCX6Lu944Gr44GU6L+U5L+h44GP44Gg44GV44GE44CCPC9wPg0K
+PHA+5LuK5b6M44Go44KC44KI44KN44GX44GP44GK6aGY44GE44GE44Gf44GX
+44G+44GZ44CCPC9wPg0KPC9ib2R5Pg0KPC9odG1sPg0KDQo8L2JvZHk+DQo8
+L2h0bWw+DQo=
+
+----==_mimepart_5dd23e4ad2b49_12b0031416db8653a1--
+
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 995ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/" for 192.168.192.1 at 2019-11-18 06:46:34 +0000
+Cannot render console from 192.168.192.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (178.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 301ms (Views: 280.9ms | ActiveRecord: 1.6ms)
+
+

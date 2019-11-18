@@ -6,6 +6,7 @@ RSpec.feature 'user_purchase', type: :feature do
   before do
     @user = FactoryBot.create(:user)
     @product = FactoryBot.create(:product)
+    @admin = FactoryBot.create(:admin)
   end
 
   describe 'user_purchase_scenario' do
@@ -15,6 +16,10 @@ RSpec.feature 'user_purchase', type: :feature do
       fill_in 'メールアドレス', with: @user.email
       fill_in 'パスワード', with: @user.password
       click_button 'ログイン'
+      visit '/products/1'
+      click_link '買い物かごに入れる'
+      click_on '決済'
+      click_link 'ログアウト'
     end
   end
 end
