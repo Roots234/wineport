@@ -48,26 +48,28 @@
 }
 
 #paginate{
-    text-align: center !important;
+    text-align: center;
     background-color: white !important;
     justify-content: center;
     padding-top: 10px;
-    li{
-      padding: 0px 2px;  
-          a{
-            color: #212529;
-            box-sizing: border-box;
-            border: solid 1px #6c6e73;
-            display: block;
-            padding: 8px 12px 7px 13px;
-            background: linear-gradient(#f7f8fa,#e7e9ec);
-            border-radius: 3px;
-            border-color: #adb1b8;
-            font-size: 13px;
-              
-          }
+    .pagination{
+        text-align: center;
+        li{
+            padding: 0px 2px;  
+                a{
+                color: #212529;
+                box-sizing: border-box;
+                border: solid 1px #6c6e73;
+                display: block;
+                padding: 8px 12px 7px 13px;
+                background: linear-gradient(#f7f8fa,#e7e9ec);
+                border-radius: 3px;
+                border-color: #adb1b8;
+                font-size: 13px;
+                    
+                }
+        }
     }
-    
 }
 
 

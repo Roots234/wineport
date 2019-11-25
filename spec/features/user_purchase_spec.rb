@@ -8,7 +8,7 @@ RSpec.feature 'user_purchase', type: :feature do
     @product = FactoryBot.create(:product)
   end
 
-  describe 'user_purchase_scenario' do
+  describe 'ユーザーが商品を購入' do
     scenario 'user purchases an item' do
       visit root_path
       click_link 'ログイン'

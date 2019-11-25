@@ -7,7 +7,7 @@ RSpec.feature 'product_register', type: :feature do
     @admin = FactoryBot.create(:admin)
   end
 
-  describe 'product_register_scenario' do
+  describe 'アドミンが製品を登録'' do
     scenario 'admin register an item' do
       visit root_path
       click_link '出品者ログイン（アドミン）'

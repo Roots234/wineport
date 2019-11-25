@@ -2329,3 +2329,245 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 152ms (Views: 124.5ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/products/1" for 192.168.224.1 at 2019-11-22 09:15:25 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 5752ms (Views: 5617.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/admins/sign_in" for 192.168.224.1 at 2019-11-22 09:15:49 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.6ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (1860.2ms)
+Completed 200 OK in 2011ms (Views: 1987.7ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/admins/sign_in" for 192.168.224.1 at 2019-11-22 09:15:59 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QcQPUInwEHioPKzZygYAubNDaeuKJt6U9VcCBzZYOGuyehx8pCAG71NAIrR22uPx4rR+BeJUdldBJUiseo0Trg==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 157ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QcQPUInwEHioPKzZygYAubNDaeuKJt6U9VcCBzZYOGuyehx8pCAG71NAIrR22uPx4rR+BeJUdldBJUiseo0Trg==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 226ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 192.168.224.1 at 2019-11-22 09:16:07 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PQt1beCUMBp2UkGJ4mwLry+XhbxxUzgZOBBps6CQnpSUs/yC3CfGdcy7nvwaeUFFMwZdqh9PHIvTH1u5wKPesw==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admins
+Completed 302 Found in 172ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admins" for 192.168.224.1 at 2019-11-22 09:16:07 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::DashboardsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` ORDER BY `admins`.`id` DESC LIMIT 1[0m
+  [1m[35m (20.2ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `purchase_record_products` ON `purchase_record_products`.`product_id` = `products`.`id` WHERE `products`.`admin_id` = 1[0m
+  Rendering admins/dashboards/index.html.haml within layouts/application
+  Rendered admins/dashboards/index.html.haml within layouts/application (13.1ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 284ms (Views: 146.7ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/" for 192.168.224.1 at 2019-11-22 09:16:10 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (211.1ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 329ms (Views: 300.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/1" for 192.168.224.1 at 2019-11-22 09:16:12 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/show.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 120ms (Views: 92.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1" for 192.168.224.1 at 2019-11-22 09:16:35 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 159ms (Views: 134.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1" for 192.168.224.1 at 2019-11-22 09:16:39 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 131ms (Views: 108.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 192.168.224.1 at 2019-11-22 09:19:17 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (112.0ms)
+Completed 200 OK in 198ms (Views: 177.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 192.168.224.1 at 2019-11-22 09:19:17 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (120.9ms)
+Completed 200 OK in 235ms (Views: 216.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products/1" for 192.168.224.1 at 2019-11-22 09:19:19 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 123ms (Views: 98.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins/sign_in" for 192.168.224.1 at 2019-11-22 09:19:26 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.haml within layouts/application
+  Rendered /usr/local/bundle/gems/devise-i18n-views-0.3.7/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered admins/sessions/new.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 120ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 192.168.224.1 at 2019-11-22 09:19:31 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slWhqRo/zpLRv6pdH1fJmHwRJuSq7tC+W9rpD0Noi0YXU0Gw6DoEZ+M0bzMsJdTwvsYyNWsXtgYJdEoZkOPnrw==", "admin"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'a@gmail.com' ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admins
+Completed 302 Found in 138ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admins" for 192.168.224.1 at 2019-11-22 09:19:31 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by Admins::DashboardsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` ORDER BY `admins`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `purchase_record_products` ON `purchase_record_products`.`product_id` = `products`.`id` WHERE `products`.`admin_id` = 1[0m
+  Rendering admins/dashboards/index.html.haml within layouts/application
+  Rendered admins/dashboards/index.html.haml within layouts/application (3.3ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 135ms (Views: 109.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 192.168.224.1 at 2019-11-22 09:19:42 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (79.5ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 168ms (Views: 184.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/1" for 192.168.224.1 at 2019-11-22 09:19:44 +0000
+Cannot render console from 192.168.224.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1 ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/show.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 155ms (Views: 117.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-25 05:41:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (18.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (2260.1ms)
+Completed 200 OK in 3316ms (Views: 3225.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-25 05:43:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (180.6ms)
+Completed 200 OK in 303ms (Views: 283.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-25 05:43:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (190.8ms)
+Completed 200 OK in 348ms (Views: 319.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-25 05:43:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (154.3ms)
+Completed 200 OK in 264ms (Views: 245.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-25 05:47:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (144.7ms)
+Completed 200 OK in 256ms (Views: 240.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-25 05:49:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 122.29.85.75, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (194.7ms)
+Completed 200 OK in 332ms (Views: 310.5ms | ActiveRecord: 1.0ms)
+
+
