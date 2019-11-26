@@ -57,5 +57,5 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :letter_opener_web
   config.action_mailer.perform_deliveries = true
   config.web_console.whitelisted_ips = '114.146.231.180'
-  config.web_console.whitelisted_ips = '122.29.85.75'
+  config.web_console.whitelisted_ips = '106.171.32.156'
 end
