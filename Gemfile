@@ -85,6 +85,7 @@ end
 
 group :production do
   gem 'mysql2'
+  gem 'rails_12factor', '~> 0.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
