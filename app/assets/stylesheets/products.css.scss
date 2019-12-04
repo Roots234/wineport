@@ -41,7 +41,7 @@
 }
 
 #productimg{
-    position: center;
+    text-align: center;
 }
 .cover-text{
     height: auto;
@@ -101,4 +101,29 @@
 #show{
     width: 230px;
     height: auto;
+}
+
+.btn{
+    border:solid 1px #6c6e73;
+}
+
+table{
+    border:solid 1px;
+    width:100%;
+    tr{
+        border:solid 1px;
+        td{
+            border:solid 1px;
+            padding:0 1rem;
+        }
+        th{
+            border:solid 1px;
+            padding:0 1rem;
+            text-align: center;
+        }
+    }
+        
+}
+h2{
+    text-align:center;
 }

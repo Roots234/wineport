@@ -1,5 +1,5 @@
 .container
-  %h3.center.mb-30
+  %h3.mb-30
     買い物かごの中身
   %ul.collection.with-header
     - @products.each do |product|
@@ -8,6 +8,7 @@
         %p.right
           %span
             = product.price
+            円
           = link_to product_delete_in_baskets_path(product), method: :post, data: {confirm: '削除してもいいですか？'} do
             %span.basket__delete
               ✕
@@ -17,4 +18,4 @@
   = form_tag charge_path do
     - @products.each do |p|
       = hidden_field_tag 'product_ids[]', p.id
-      = submit_tag "決済"
+    = submit_tag "決済"
