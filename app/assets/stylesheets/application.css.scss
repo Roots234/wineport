@@ -10,7 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ * = require_tree .
  */
+ 
 @import "bootstrap";
 @import "products.css.scss";
 @import "charge.css.scss";
@@ -23,5 +25,19 @@ nav{
             color:white;
             
         }
+    }
+}
+
+#paginate {
+    background-color: rgb(37,47,61)
+}
+.pagination {
+    justify-content: center;
+    background-color: rgb(37,47,61);
+    margin-bottom:0;
+    padding-bottom:1rem;
+
+    li{
+        padding: 0 1rem;
     }
 }

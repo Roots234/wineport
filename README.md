@@ -4,7 +4,7 @@
 ワインを販売するサイトです。
 
 [使用技術一覧]
-* Ruby,Rails,Git,Docker,HTML,CSS,AWS(S3)
+* Ruby,Rails,Git,Docker,HTML,CSS,AWS(S3),Sendgrid,Heroku
 
 [主な使用GEM一覧]
 * kaminari,devise,haml,ransack,minimagick,rubocop,simple_form
@@ -24,8 +24,11 @@
 
 [操作方法]
 * Admin
-  →簡単ログイン
+  →簡単ログイン(アドミン)
+  
     →
 * User
 
-[使用技術一覧]
+[苦労した点]
+* Dockerへの環境移行
+* Deviceのviewのカスタマイズ
