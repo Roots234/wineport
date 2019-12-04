@@ -4437,3 +4437,31 @@ Processing by BasketsController#show as HTML
 Completed 200 OK in 137ms (Views: 103.3ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/sales_record" for 172.22.0.1 at 2019-12-04 20:17:09 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by SalesRecordsController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPurchaseRecord Load (0.7ms)[0m  [1m[34mSELECT  `purchase_records`.* FROM `purchase_records` WHERE `purchase_records`.`user_id` = 2 LIMIT 1[0m
+  Rendering sales_records/show.html.haml within layouts/application
+  [1m[36mPurchaseRecordProduct Load (0.6ms)[0m  [1m[34mSELECT `purchase_record_products`.* FROM `purchase_record_products` WHERE `purchase_record_products`.`purchase_record_id` = 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 42 LIMIT 1[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendered sales_records/show.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 143ms (Views: 111.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:17:09 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.5ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 131ms (Views: 102.4ms | ActiveRecord: 2.1ms)
+
+

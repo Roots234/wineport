@@ -44,6 +44,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'rails-i18n', '~> 5.1'
 gem 'ransack'
 gem 'simple_form'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -54,7 +55,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'dotenv-rails'
   gem 'factory_bot_rails', '~> 4.10.0'
-  gem 'faker'
   gem 'mysql2'
   gem 'pry-byebug'
   gem 'pry-rails'
