@@ -4232,3 +4232,208 @@ Processing by SalesRecordsController#show as HTML
 Completed 200 OK in 149ms (Views: 118.2ms | ActiveRecord: 4.5ms)
 
 
+Started GET "/sales_record" for 172.22.0.1 at 2019-12-04 20:05:52 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by SalesRecordsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPurchaseRecord Load (0.5ms)[0m  [1m[34mSELECT  `purchase_records`.* FROM `purchase_records` WHERE `purchase_records`.`user_id` = 2 LIMIT 1[0m
+  Rendering sales_records/show.html.haml within layouts/application
+  [1m[36mPurchaseRecordProduct Load (0.5ms)[0m  [1m[34mSELECT `purchase_record_products`.* FROM `purchase_record_products` WHERE `purchase_record_products`.`purchase_record_id` = 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 42 LIMIT 1[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendered sales_records/show.html.haml within layouts/application (20.3ms)
+Completed 200 OK in 157ms (Views: 128.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:06:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.9ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 122ms (Views: 97.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 172.22.0.1 at 2019-12-04 20:06:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (156.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 286ms (Views: 257.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/2" for 172.22.0.1 at 2019-12-04 20:06:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (6.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 123ms (Views: 97.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/products/pj6uZp/add_to_baskets" for 172.22.0.1 at 2019-12-04 20:06:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by Products::AddToBasketsController#create as HTML
+  Parameters: {"authenticity_token"=>"0gFdBW6qNHTSXxFrrtyHhSvE1BEWqlRAzl7NOHJuGZsOxbzHQifa9eZtsU3fnCPf5Xk25FbUD92q6ZSlIr2OIw==", "product_id"=>"pj6uZp"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `basket_products` (`basket_id`, `product_id`, `created_at`, `updated_at`) VALUES (1, 2, '2019-12-04 20:06:36', '2019-12-04 20:06:36')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/basket
+Completed 302 Found in 27ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:06:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.9ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 166ms (Views: 132.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 172.22.0.1 at 2019-12-04 20:06:38 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (149.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 277ms (Views: 251.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/6" for 172.22.0.1 at 2019-12-04 20:06:40 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1[0m
+  Rendering products/show.html.haml within layouts/application
+  Rendered products/show.html.haml within layouts/application (5.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 116.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/products/E37uWE/add_to_baskets" for 172.22.0.1 at 2019-12-04 20:06:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by Products::AddToBasketsController#create as HTML
+  Parameters: {"authenticity_token"=>"DcxuObZInkgKMibT+ZiB6HgQs/T7iSbxPt5WYsBkeMLRCI/7msVwyT4AhvWI2CWytq1RAbv3fWxaaQ//kLfveg==", "product_id"=>"E37uWE"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 6 LIMIT 1[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `basket_products` (`basket_id`, `product_id`, `created_at`, `updated_at`) VALUES (1, 6, '2019-12-04 20:06:41', '2019-12-04 20:06:41')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/basket
+Completed 302 Found in 29ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:06:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.8ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 183ms (Views: 147.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:07:55 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 139ms (Views: 114.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:12:27 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.6ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 156ms (Views: 130.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/sales_record" for 172.22.0.1 at 2019-12-04 20:12:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by SalesRecordsController#show as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPurchaseRecord Load (1.9ms)[0m  [1m[34mSELECT  `purchase_records`.* FROM `purchase_records` WHERE `purchase_records`.`user_id` = 2 LIMIT 1[0m
+  Rendering sales_records/show.html.haml within layouts/application
+  [1m[36mPurchaseRecordProduct Load (0.7ms)[0m  [1m[34mSELECT `purchase_record_products`.* FROM `purchase_record_products` WHERE `purchase_record_products`.`purchase_record_id` = 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 42 LIMIT 1[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendered sales_records/show.html.haml within layouts/application (26.3ms)
+Completed 200 OK in 237ms (Views: 188.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 172.22.0.1 at 2019-12-04 20:13:38 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.haml within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `products`[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` LIMIT 20 OFFSET 0[0m
+  Rendered products/index.html.haml within layouts/application (138.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 257ms (Views: 234.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/sales_record" for 172.22.0.1 at 2019-12-04 20:13:44 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by SalesRecordsController#show as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPurchaseRecord Load (1.0ms)[0m  [1m[34mSELECT  `purchase_records`.* FROM `purchase_records` WHERE `purchase_records`.`user_id` = 2 LIMIT 1[0m
+  Rendering sales_records/show.html.haml within layouts/application
+  [1m[36mPurchaseRecordProduct Load (0.7ms)[0m  [1m[34mSELECT `purchase_record_products`.* FROM `purchase_record_products` WHERE `purchase_record_products`.`purchase_record_id` = 1[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 42 LIMIT 1[0m
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  Rendered sales_records/show.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 125ms (Views: 93.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/basket" for 172.22.0.1 at 2019-12-04 20:13:45 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 106.171.32.156, 127.0.0.0/127.255.255.255, ::1
+Processing by BasketsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBasket Load (0.8ms)[0m  [1m[34mSELECT  `baskets`.* FROM `baskets` WHERE `baskets`.`user_id` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`products`.`price`) FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendering baskets/show.html.haml within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` INNER JOIN `basket_products` ON `products`.`id` = `basket_products`.`product_id` WHERE `basket_products`.`basket_id` = 1[0m
+  Rendered baskets/show.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 137ms (Views: 103.3ms | ActiveRecord: 2.6ms)
+
+
